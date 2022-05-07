@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common_3\OS\Camera\CameraController.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Core\CPUConfig.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Core\Screenshot.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Core\ThreadSystem.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Core\Timer.c" />
+    <ClCompile Include="..\..\..\Common_3\OS\FileSystem\FileSystem.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\FileSystem\SystemRun.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Fonts\stbtt.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Fonts\FontSystem.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\FileSystem\ZipFileSystem.c" />
+    <ClCompile Include="..\..\..\Common_3\OS\Input\InputSystem.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\MemoryTracking\MemoryTracking.c" />
+    <ClCompile Include="..\..\..\Common_3\OS\Profiler\GpuProfiler.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Profiler\ProfilerBase.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Scripting\LuaManager.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Scripting\LuaManagerImpl.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Scripting\LuaSystem.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\UI\UI.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\WindowSystem\WindowSystem.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Windows\WindowsStackTraceDump.cpp" />
+    <ClInclude Include="..\..\..\Common_3\OS\Core\Config.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Fonts\Shaders\FSL\resources.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IFont.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IScreenshot.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IScripting.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IUI.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Scripting\LuaManager.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Scripting\LuaManagerCommon.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Scripting\LuaManagerImpl.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Windows\WindowsConfig.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Windows\WindowsStackTraceDump.h" />
+    <ClCompile Include="..\..\..\Common_3\OS\Windows\WindowsFileSystem.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Windows\WindowsTime.c" />
+    <ClCompile Include="..\..\..\Common_3\OS\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\basis_universal\transcoder\basisu_transcoder.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\cpu_features\src\impl_x86_windows.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\allocator_forge.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\assert.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\EAStdC\EAMemory.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\EAStdC\EASprintf.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\fixed_pool.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\hashtable.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\intrusive_list.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\numeric_limits.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\red_black_tree.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\string.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\thread_support.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lapi.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lauxlib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lbaselib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lbitlib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lcode.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lcorolib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lctype.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\ldblib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\ldebug.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\ldo.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\ldump.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lfunc.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lgc.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\linit.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\liolib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\llex.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lmathlib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lmem.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\loadlib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lobject.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lopcodes.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\loslib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lparser.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lstate.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lstring.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lstrlib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\ltable.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\ltablib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\ltm.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lundump.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lutf8lib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lvm.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\lua-5.3.5\src\lzio.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\aescrypt.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\aeskey.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\aestab.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\hmac.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\sha1.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\sha2.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_crypt.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_crypt_brg.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_os.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_strm_raw.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_strm_wzaes.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_strm_zlib.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_zip.c" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\rmem\src\rmem_get_module_info.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\rmem\src\rmem_hook.cpp" />
+    <ClCompile Include="..\..\..\Common_3\ThirdParty\OpenSource\rmem\src\rmem_lib.cpp" />
+    <ClCompile Include="..\..\..\Middleware_3\Animation\AnimatedObject.cpp" />
+    <ClCompile Include="..\..\..\Middleware_3\Animation\Animation.cpp" />
+    <ClCompile Include="..\..\..\Middleware_3\Animation\Clip.cpp" />
+    <ClCompile Include="..\..\..\Middleware_3\Animation\ClipController.cpp" />
+    <ClCompile Include="..\..\..\Middleware_3\Animation\ClipMask.cpp" />
+    <ClCompile Include="..\..\..\Middleware_3\Animation\Rig.cpp" />
+    <ClCompile Include="..\..\..\Middleware_3\Animation\SkeletonBatcher.cpp" />
+    <ClInclude Include="..\..\..\Common_3\OS\Core\Atomics.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Core\GPUConfig.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Core\RingBuffer.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Core\ThreadSystem.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IApp.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\ICameraController.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IFileSystem.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IInput.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\ILog.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IMemory.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IMiddleware.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IOperatingSystem.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IProfiler.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\IThread.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Interfaces\ITime.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Logging\Log.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Math\MathTypes.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Profiler\GpuProfiler.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Profiler\ProfilerBase.h" />
+    <ClInclude Include="..\..\..\Common_3\OS\Profiler\ProfilerHTML.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\imgui\imconfig.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\imgui\imgui.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\aes.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\aesopt.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\aestab.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\brg_endian.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\brg_types.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\hmac.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\sha1.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\lib\brg\sha2.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_crypt.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_os.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_strm.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_strm_wzaes.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_strm_zlib.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\minizip\mz_zip.h" />
+    <ClInclude Include="..\..\..\Common_3\ThirdParty\OpenSource\zip\miniz.h" />
+    <ClInclude Include="..\..\..\Middleware_3\Animation\AnimatedObject.h" />
+    <ClInclude Include="..\..\..\Middleware_3\Animation\Animation.h" />
+    <ClInclude Include="..\..\..\Middleware_3\Animation\Clip.h" />
+    <ClInclude Include="..\..\..\Middleware_3\Animation\ClipController.h" />
+    <ClInclude Include="..\..\..\Middleware_3\Animation\ClipMask.h" />
+    <ClInclude Include="..\..\..\Middleware_3\Animation\Rig.h" />
+    <ClInclude Include="..\..\..\Middleware_3\Animation\SkeletonBatcher.h" />
+    <ClInclude Include="..\..\..\Middleware_3\PaniniProjection\Shaders\FSL\resources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common_3\OS\Logging\Log.c" />
+    <ClCompile Include="..\..\..\Common_3\OS\Windows\WindowsLog.c" />
+    <ClCompile Include="..\..\..\Common_3\OS\Windows\WindowsBase.cpp" />
+    <ClCompile Include="..\..\..\Common_3\OS\Windows\WindowsThread.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\..\Common_3\ThirdParty\OpenSource\EASTL\EASTL.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <FSLShader Include="..\..\..\Common_3\OS\Fonts\Shaders\FSL\fontstash.frag.fsl" />
+    <FSLShader Include="..\..\..\Common_3\OS\Fonts\Shaders\FSL\fontstash2D.vert.fsl" />
+    <FSLShader Include="..\..\..\Common_3\OS\Fonts\Shaders\FSL\fontstash3D.vert.fsl" />
+    <FSLShader Include="..\..\..\Common_3\OS\UI\Shaders\FSL\imgui.frag.fsl" />
+    <FSLShader Include="..\..\..\Common_3\OS\UI\Shaders\FSL\imgui.vert.fsl" />
+    <FSLShader Include="..\..\..\Common_3\OS\UI\Shaders\FSL\textured_mesh.frag.fsl" />
+    <FSLShader Include="..\..\..\Common_3\OS\UI\Shaders\FSL\textured_mesh.vert.fsl" />
+    <FSLShader Include="..\..\..\Middleware_3\PaniniProjection\Shaders\FSL\panini_projection.frag.fsl" />
+    <FSLShader Include="..\..\..\Middleware_3\PaniniProjection\Shaders\FSL\panini_projection.vert.fsl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{30DD3D57-0026-48C8-BFD1-6392F319E23A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>OS</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <IncludePath>$(VULKAN_SDK)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VULKAN_SDK)\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <IncludePath>$(VULKAN_SDK)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VULKAN_SDK)\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <AdditionalLibraryDirectories>$(GLFW_DIR)\lib;$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4099</AdditionalOptions>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099</AdditionalOptions>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <FSLShader>
+      <OutDir>$(OutDir)/$(ProjectName)/Shaders</OutDir>
+      <BinaryOutDir>$(OutDir)/$(ProjectName)/Shaders/Binary</BinaryOutDir>
+      <Language>DIRECT3D11 DIRECT3D12 VULKAN</Language>
+    </FSLShader>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <AdditionalOptions>/ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(GLFW_DIR)\lib;$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4099</AdditionalOptions>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099</AdditionalOptions>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <FSLShader>
+      <OutDir>$(OutDir)/$(ProjectName)/Shaders</OutDir>
+      <BinaryOutDir>$(OutDir)/$(ProjectName)/Shaders/Binary</BinaryOutDir>
+      <Language>DIRECT3D11 DIRECT3D12 VULKAN</Language>
+    </FSLShader>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\..\Common_3\Tools\ForgeShadingLanguage\VS\fsl.targets" />
+  </ImportGroup>
+</Project>

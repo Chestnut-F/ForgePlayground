@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{9fbaa6a9-7bf6-4cc4-a3e5-4d1b6f1f78d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="01_MeshViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FSLShader Include="Shaders\basic.frag.fsl">
+      <Filter>Shaders</Filter>
+    </FSLShader>
+    <FSLShader Include="Shaders\basic.vert.fsl">
+      <Filter>Shaders</Filter>
+    </FSLShader>
+    <FSLShader Include="Shaders\resources.h.fsl">
+      <Filter>Shaders</Filter>
+    </FSLShader>
+  </ItemGroup>
+</Project>

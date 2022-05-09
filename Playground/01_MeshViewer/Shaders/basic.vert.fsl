@@ -1,0 +1,32 @@
+#include "resources.h.fsl"
+
+STRUCT(VSInput)
+{
+    DATA(float3, Position, POSITION);
+	DATA(float3, Normal, NORMAL);
+    DATA(float2, UV, TEXCOORD0);
+};
+
+STRUCT(VSOutput)
+{
+    DATA(float4, Position, SV_Position);
+	DATA(float3, PosWorld, POSITION);
+	DATA(float3, Normal, NORMAL);
+    DATA(float2, UV, TEXCOORD0);
+};
+
+VSOutput VS_MAIN(VSInput In)
+{
+    INIT_MAIN;
+	VSOutput Out;
+
+	Out.PosWorld = mul(Get(modelMatrix), float4(In.Position, 1.0f)).xyz;
+    Out.Position = mul(Get(viewProjectionMatrix), float4(Out.PosWorld, 1.0f));
+
+	float3 inNormal = mul(modelMatrix, float4(In.Normal, 0)).xyz;
+	Out.Normal = normalize(inNormal);
+
+    Out.UV = In.UV;
+
+    RETURN(Out);
+}

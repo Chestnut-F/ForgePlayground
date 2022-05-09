@@ -1,0 +1,26 @@
+#ifndef RESOURCES_H
+#define RESOURCES_H
+
+CBUFFER(globalConstants, UPDATE_FREQ_PER_FRAME, b0, binding = 0)
+{
+    DATA(float4x4, viewProjectionMatrix, None);
+	DATA(float4, cameraPosition, None);
+	DATA(float4, lightColor[4], None);
+	DATA(float4, lightDirection[3], None);
+};
+
+CBUFFER(meshConstants, UPDATE_FREQ_PER_DRAW, b1, binding = 1)
+{
+    DATA(float4x4, modelMatrix, None);
+};
+
+CBUFFER(materialConstants, UPDATE_FREQ_PER_DRAW, b2, binding = 2)
+{
+    DATA(float4, baseColorFactor, None);
+};
+
+RES(Tex2D(float4), baseColorMap, UPDATE_FREQ_PER_DRAW, t0, binding = 3);
+
+RES(SamplerState, baseColorSampler, UPDATE_FREQ_PER_DRAW, s0, binding = 4);
+
+#endif // RESOURCES_H

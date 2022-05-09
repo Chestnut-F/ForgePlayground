@@ -1,0 +1,95 @@
+#define PI 3.141592654f
+
+#include "resources.h.fsl"
+
+float3 fresnelSchlick(float cosTheta, float3 F0)
+{
+	float Fc = pow(1.0f - cosTheta, 5.0f);
+	return F0 + (1.0f - F0) * Fc;
+}
+
+float distributionGGX(float3 N, float3 H, float roughness)
+{
+	float a = roughness*roughness;
+	float a2 = a*a;
+	float NdotH = max(dot(N,H), 0.0);
+	float NdotH2 = NdotH*NdotH;
+	float nom = a2;
+	float denom = (NdotH2 * (a2 - 1.0) + 1.0);
+	denom = PI * denom * denom;
+
+	return nom / denom;
+}
+
+float Vis_SmithJointApprox(float a, float NoV, float NoL)
+{	
+	float Vis_SmithV = NoL * (NoV * (1.0f - a) + a);
+	float Vis_SmithL = NoV * (NoL * (1.0f - a) + a);
+	return 0.5 * rcp(max(Vis_SmithV + Vis_SmithL, 0.001));
+}
+
+float3 ComputeLight(float3 albedo, float3 _lightColor,
+		float3 metalness, float roughness,
+		float3 N, float3 L, float3 V, float3 H, float NoL, float NoV)
+{
+	float a  = roughness * roughness;
+	// 0.04 is the index of refraction for metal
+	float3 F0 = float3(0.04f, 0.04f, 0.04f);
+	float3 diffuse = (1.0 - metalness) * albedo;
+	float NDF = distributionGGX(N, H, roughness);
+	float G = Vis_SmithJointApprox(a, NoV, NoL);
+	float3 F = fresnelSchlick(max(dot(N, H), 0.0f), lerp(F0, albedo, metalness));	
+	float3 specular = NDF * G * F;
+
+	float3 irradiance = _lightColor * float3(1.0, 1.0, 1.0);
+	float3 result = (diffuse + specular) * NoL * irradiance;
+
+	return result;
+}
+
+STRUCT(VSOutput)
+{
+    DATA(float4, Position, SV_Position);
+	DATA(float3, PosWorld, POSITION);
+	DATA(float3, Normal, NORMAL);
+    DATA(float2, UV, TEXCOORD0);
+};
+
+float4 PS_MAIN(VSOutput In)
+{
+    INIT_MAIN;
+    float4 Out;
+
+	float3 V = normalize(Get(cameraPosition).xyz - In.PosWorld);
+
+    float4 baseColor = SampleTex2D(Get(baseColorMap), Get(baseColorSampler), In.UV);
+	baseColor = baseColor * Get(baseColorFactor);
+
+	float3 metalness = float3(0.0f, 0.0f, 0.0f);
+
+	float roughness = 1.0f;
+
+	float3 normal = In.Normal;
+
+	float3 N = normal;
+	float NoV = max(dot(N,V), 0.0);	
+
+	float3 result = float3(0.0f, 0.0f, 0.0f);
+
+	UNROLL
+	for(uint i=0; i<3; ++i)
+	{
+		float3 L = normalize(Get(lightDirection)[i].xyz);
+		float3 radiance = Get(lightColor)[i].rgb;
+		float lightIntensity = Get(lightColor)[i].a;
+		float3 H = normalize(V + L);	
+		float NoL = max(dot(N,L), 0.0);
+		result += ComputeLight(baseColor.rgb, radiance, metalness, roughness, N, L, V, H, NoL, NoV) * lightIntensity;
+	}
+
+	result += baseColor.rgb * Get(lightColor)[3].rgb * Get(lightColor)[3].a;
+
+	Out = float4(result.r, result.g, result.b, baseColor.a);
+
+    RETURN(Out);
+}
